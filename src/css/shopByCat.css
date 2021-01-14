@@ -1,0 +1,34 @@
+.imageFile {
+  height: 60%;
+  width: 100%;
+  /* border: 2px solid red; */
+  border-radius: 25px;
+}
+
+.imageText_1 {
+  text-align: center;
+  font-weight: 300;
+  font-size: 18px;
+  margin: 0px 0px 0px 0px;
+  line-height: 120%;
+  font-family: 'Open sans', sans-serif;
+}
+
+.imageText {
+  text-align: center;
+  color: #7a7c7f;
+  font-size: 20px;
+  font-family: 'Libre Baskerville', serif;
+  line-height: 45px;
+  text-align: center;
+  text-shadow: 0 1px 1px #fff;
+  padding-top: 20px;
+}
+
+.headerText {
+  font-family: 'Enriqueta', arial, serif;
+  line-height: 1.25;
+  margin: 0 0 10px;
+  font-size: 40px;
+  font-weight: bold;
+}
