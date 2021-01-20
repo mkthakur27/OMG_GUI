@@ -1,6 +1,16 @@
 import React, { Component } from 'react'
 import '../css/topMenuBar.css'
 import Image from 'react-bootstrap/Image'
+import {
+  NavLink,
+  Route,
+  Redirect,
+  Switch,
+  BrowserRouter,
+  Link,
+  Router,
+} from 'react-router-dom'
+import AddItem from './addItem'
 
 class TopMenuBar extends Component {
   state = {}
@@ -9,13 +19,13 @@ class TopMenuBar extends Component {
       <nav className="navbar navbar-expand-lg navbar-light bg-white fixed-top">
         {/* <li className="nav-item"> */}
         <strong>
-          <a href="#">
+          <Link to="/">
             <Image
               src={'./logo/omglogo2.jpg'}
               className="pl-1 logoImg"
               alt="LOGO"
             ></Image>
-          </a>
+          </Link>
         </strong>
         {/* </li> */}
         <ul className="nav navbar-nav w-50">
@@ -78,14 +88,16 @@ class TopMenuBar extends Component {
           </li>
         </ul>
         <ul>
-          <button onClick={this.handleClick}>admin</button>
+          <Link to="/addItem" action tag="a">
+            Add Item
+          </Link>
         </ul>
       </nav>
     )
   }
 
   handleClick() {
-    window.open('../additem.jsx')
+    window.open('www.google.com', '_blank')
   }
 }
 

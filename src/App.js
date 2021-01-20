@@ -5,6 +5,8 @@ import TopMenuBar from './Components/topMenuBar'
 import ShopByCat from './Components/shopByCat'
 import ShopByBrand from './Components/shopByBrand'
 import AddItem from './Components/addItem'
+import Home from './Components/home'
+import { Route, BrowserRouter as Router } from 'react-router-dom'
 
 class App extends Component {
   state = {
@@ -23,16 +25,15 @@ class App extends Component {
     // })
     // return <main>{homebody}</main>
     return (
+      <Router>
       <main>
         <div>{this.topNav()}</div>
-        {/* <div>{homebody}</div> */}
-        <div>
-          <ShopByCat/>
-        </div>
-        <div>
-          <ShopByBrand/>
-        </div>
+        
+        <Route path="/" component={Home} exact/>
+        <Route path="/addItem" component={AddItem}/>
+        
       </main>
+      </Router>
     )
     // return (
     //   <main>
