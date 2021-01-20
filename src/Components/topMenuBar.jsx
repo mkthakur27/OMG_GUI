@@ -8,13 +8,15 @@ class TopMenuBar extends Component {
     return (
       <nav className="navbar navbar-expand-lg navbar-light bg-white fixed-top">
         {/* <li className="nav-item"> */}
-        <a href="#">
-          <Image
-            src={'./logo/omglogo.jpg'}
-            className="img-responsive pl-1"
-            alt="LOGO"
-          ></Image>
-        </a>
+        <strong>
+          <a href="#">
+            <Image
+              src={'./logo/omglogo2.jpg'}
+              className="pl-1 logoImg"
+              alt="LOGO"
+            ></Image>
+          </a>
+        </strong>
         {/* </li> */}
         <ul className="nav navbar-nav w-50">
           <li className="nav-item p-3">
@@ -75,8 +77,15 @@ class TopMenuBar extends Component {
             </a>
           </li>
         </ul>
+        <ul>
+          <button onClick={this.handleClick}>admin</button>
+        </ul>
       </nav>
     )
+  }
+
+  handleClick() {
+    window.open('../additem.jsx')
   }
 }
 

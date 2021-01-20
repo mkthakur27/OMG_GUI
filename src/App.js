@@ -3,6 +3,8 @@ import './App.css'
 // import Item from './Components/item'
 import TopMenuBar from './Components/topMenuBar'
 import ShopByCat from './Components/shopByCat'
+import ShopByBrand from './Components/shopByBrand'
+import AddItem from './Components/addItem'
 
 class App extends Component {
   state = {
@@ -27,8 +29,18 @@ class App extends Component {
         <div>
           <ShopByCat/>
         </div>
+        <div>
+          <ShopByBrand/>
+        </div>
       </main>
     )
+    // return (
+    //   <main>
+    //     <div>
+    //       <AddItem/>
+    //     </div>
+    //   </main>
+    // )
   }
 
   topNav()
