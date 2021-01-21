@@ -6,6 +6,7 @@ import ShopByCat from './Components/shopByCat'
 import ShopByBrand from './Components/shopByBrand'
 import AddItem from './Components/addItem'
 import Home from './Components/home'
+import ShowItem from './Components/showItems'
 import { Route, BrowserRouter as Router } from 'react-router-dom'
 
 class App extends Component {
@@ -31,6 +32,7 @@ class App extends Component {
         
         <Route path="/" component={Home} exact/>
         <Route path="/addItem" component={AddItem}/>
+        <Route path="/showItem" component={ShowItem}/>
         
       </main>
       </Router>

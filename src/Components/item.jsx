@@ -6,17 +6,15 @@ class Item extends Component {
     return (
       <div>
         <Image
-          src={this.props.username.imgPath}
+          src={this.props.item.imgPath}
           className="img-responsive img-circle"
           style={{ width: '200px', height: '300px' }}
-          alt={this.props.username.name}
+          alt={this.props.item.name}
         ></Image>
 
-        <h5>{this.props.username.brand} </h5>
-        <h6>{this.props.username.description} </h6>
-        <h3>
-          {this.formatPrice(this.getPrice(this.props.username.sizePriceMap))}
-        </h3>
+        <h5>{this.props.item.brand} </h5>
+        <h6>{this.props.item.description} </h6>
+        <h3>{this.formatPrice(this.getPrice(this.props.item.sizePriceMap))}</h3>
       </div>
     )
   }

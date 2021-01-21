@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 import '../css/shopByBrand.css'
 
 class ShopByBrand extends Component {
@@ -50,9 +51,9 @@ class ShopByBrand extends Component {
     return data.map((elm, index) => {
       return (
         <Col key={index}>
-          <a href="#">
+          <Link to="/showItem">
             <img className="imageFile" src={elm.imgPath}></img>
-          </a>
+          </Link>
           <img src={elm.logoImgPath} className="brandLogo"></img>
         </Col>
       )

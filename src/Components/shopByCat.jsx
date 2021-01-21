@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import '../css/shopByCat.css'
 import Image from 'react-bootstrap/Image'
+import { Link } from 'react-router-dom'
 
 class ShopByCat extends Component {
   state = {
@@ -49,13 +50,13 @@ class ShopByCat extends Component {
     return data.map((elm, index) => {
       return (
         <Col key={index}>
-          <a href="#">
+          <Link to="/showItem" typeId={elm.id}>
             <img
               className="imageFile"
               src={elm.imgPath}
               className="imageFile"
             ></img>
-          </a>
+          </Link>
           <p className="text-capitalize imageText font-weight-bold pt-1">
             {elm.name}
           </p>
