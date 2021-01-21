@@ -32,7 +32,7 @@ class App extends Component {
         
         <Route path="/" component={Home} exact/>
         <Route path="/addItem" component={AddItem}/>
-        <Route path="/showItem" component={ShowItem}/>
+        <Route path="/showItem/:typeId" component={ShowItem}/>
         
       </main>
       </Router>
