@@ -6,7 +6,7 @@ class Item extends Component {
     return (
       <div>
         <Image
-          src={this.props.item.imgPath}
+          src={'.' + this.props.item.imgPath}
           className="img-responsive img-circle"
           style={{ width: '200px', height: '300px' }}
           alt={this.props.item.name}

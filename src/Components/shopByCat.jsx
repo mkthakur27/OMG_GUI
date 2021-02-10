@@ -50,7 +50,7 @@ class ShopByCat extends Component {
     return data.map((elm, index) => {
       return (
         <Col key={index}>
-          <Link to="/showItem" typeId={elm.id}>
+          <Link to={{ pathname: `showItem/${elm.id}` }}>
             <img
               className="imageFile"
               src={elm.imgPath}

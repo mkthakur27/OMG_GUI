@@ -71,8 +71,7 @@ class ShowItems extends Component {
   }
 
   componentDidMount() {
-    alert(this.props)
-    const targetUrl = `http://localhost:8080/getItemsByType/${this.props.typeId}`
+    const targetUrl = `http://localhost:8080/getItemsByType/${this.props.match.params.typeId}`
     fetch(targetUrl, {
       method: 'GET',
       headers: {

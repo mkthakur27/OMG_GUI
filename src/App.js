@@ -37,6 +37,7 @@ class App extends Component {
         <Route path="/showItem" component={ShowItem}/>
         <Route path="/login" component={Login}/>
         <Route path="/register" component={Register}/>
+        <Route path="/showItem/:typeId" component={ShowItem}/>
         
       </main>
       </Router>
