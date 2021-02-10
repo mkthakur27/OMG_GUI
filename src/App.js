@@ -7,6 +7,8 @@ import ShopByBrand from './Components/shopByBrand'
 import AddItem from './Components/addItem'
 import Home from './Components/home'
 import ShowItem from './Components/showItems'
+import Login from './Components/login'
+import Register from './Components/register'
 import { Route, BrowserRouter as Router } from 'react-router-dom'
 
 class App extends Component {
@@ -32,6 +34,9 @@ class App extends Component {
         
         <Route path="/" component={Home} exact/>
         <Route path="/addItem" component={AddItem}/>
+        <Route path="/showItem" component={ShowItem}/>
+        <Route path="/login" component={Login}/>
+        <Route path="/register" component={Register}/>
         <Route path="/showItem/:typeId" component={ShowItem}/>
         
       </main>

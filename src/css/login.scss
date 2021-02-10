@@ -1,0 +1,41 @@
+.base-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .header{
+        font-size: 24px;
+        font-family: 'Courier New', Courier, monospace;
+    }
+    .content{
+        display:flex;
+        flex-direction: column;
+    }
+    .form{
+        margin-top: 2em;
+        display:flex;
+        flex-direction: column;
+        align-items:center;
+    
+        
+    }
+    .form-group{
+        display:flex;
+        flex-direction: column;
+        align-items:flex-start;
+        width:fit-content;
+        lable{
+            font: size 20px;
+        }
+        input{
+            margin-top: 6px;
+            min-width: 18em;
+            height:37px;
+            padding: 0px 10 px;
+            font-size: 16px;
+            font-family: 'Open sans' ,sans-serif;
+            background-color: #f3f3f3;
+        }
+    }
+}
