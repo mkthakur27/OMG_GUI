@@ -60,13 +60,13 @@ class TopMenuBar extends Component {
             </form>
           </li>
           <li className="nav-item pt-2">
-            <a className="nav-link" href="#">
+            <Link to="/login" className="nav-link" href="#">
               <Image
                 src="../logo/profile_icon.jpg"
                 style={{ width: '25px', height: '25px' }}
               ></Image>
               Profile
-            </a>
+            </Link>
           </li>
           <li className="nav-item pt-2">
             <a className="nav-link" href="#">

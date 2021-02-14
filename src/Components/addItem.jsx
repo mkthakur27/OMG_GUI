@@ -361,7 +361,7 @@ class AddItem extends Component {
 
   componentDidMount() {
     let urlType = 'http://localhost:8080/getAllTypes'
-    let urlBrand = 'http://localhost:8080/getAllBrand'
+    let urlBrand = 'http://localhost:8080/getAllBrands'
 
     const reqType = axios.get(urlType)
     const reqBrand = axios.get(urlBrand)

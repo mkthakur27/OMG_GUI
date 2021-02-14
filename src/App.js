@@ -5,6 +5,8 @@ import TopMenuBar from './Components/topMenuBar'
 import AddItem from './Components/addItem'
 import Home from './Components/home'
 import ShowItem from './Components/showItems'
+import Login from './Components/login'
+import Register from './Components/register'
 import { Route, BrowserRouter as Router } from 'react-router-dom'
 
 class App extends Component {
