@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import '../css/shopByCat.css'
-import Image from 'react-bootstrap/Image'
 import { Link } from 'react-router-dom'
 
 class ShopByCat extends Component {
@@ -47,15 +46,17 @@ class ShopByCat extends Component {
       )
   }
   getColumn(data) {
+    const pageName = 'shopByCat'
     return data.map((elm, index) => {
+      const imgPath = elm.imgPath
       return (
         <Col key={index}>
-          <Link to={{ pathname: `showItem/${elm.id}` }}>
-            <img
-              className="imageFile"
-              src={elm.imgPath}
-              className="imageFile"
-            ></img>
+          <Link
+            to={{
+              pathname: `showItem/${elm.id}/${pageName}`,
+            }}
+          >
+            <img className="imageFile" src={imgPath} alt={elm.name}></img>
           </Link>
           <p className="text-capitalize imageText font-weight-bold pt-1">
             {elm.name}

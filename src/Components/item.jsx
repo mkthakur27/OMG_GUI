@@ -3,10 +3,11 @@ import Image from 'react-bootstrap/Image'
 
 class Item extends Component {
   render() {
+    let srcPath = '..\\public\\.' + this.props.item.imgPath
     return (
       <div>
         <Image
-          src={'.' + this.props.item.imgPath}
+          src={srcPath}
           className="img-responsive img-circle"
           style={{ width: '200px', height: '300px' }}
           alt={this.props.item.name}

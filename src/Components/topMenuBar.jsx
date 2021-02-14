@@ -1,16 +1,7 @@
 import React, { Component } from 'react'
 import '../css/topMenuBar.css'
 import Image from 'react-bootstrap/Image'
-import {
-  NavLink,
-  Route,
-  Redirect,
-  Switch,
-  BrowserRouter,
-  Link,
-  Router,
-} from 'react-router-dom'
-import AddItem from './addItem'
+import { Link } from 'react-router-dom'
 
 class TopMenuBar extends Component {
   state = {}
@@ -20,11 +11,11 @@ class TopMenuBar extends Component {
         {/* <li className="nav-item"> */}
         <strong>
           <Link to="/">
-            <Image
-              src={'./logo/omglogo2.jpg'}
+            <img
+              src={'../../logo/omglogo2.jpg'}
               className="pl-1 logoImg"
               alt="LOGO"
-            ></Image>
+            ></img>
           </Link>
         </strong>
         {/* </li> */}

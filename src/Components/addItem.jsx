@@ -1,15 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-import {
-  Form,
-  Button,
-  FormGroup,
-  FormControl,
-  ControlLabel,
-  Row,
-  Col,
-  Container,
-} from 'react-bootstrap'
+import { Form, Button, Row, Col, Container } from 'react-bootstrap'
 import '../css/addItem.css'
 
 class AddItem extends Component {
@@ -258,6 +249,7 @@ class AddItem extends Component {
       }),
     )
     data.append('image', new Blob([itemImage]))
+    // data.append('image', itemImage)
     let url = 'http://localhost:8080/addItem'
 
     const requestOptions = {

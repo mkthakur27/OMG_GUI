@@ -2,8 +2,6 @@ import React, { Component } from 'react'
 import './App.css'
 // import Item from './Components/item'
 import TopMenuBar from './Components/topMenuBar'
-import ShopByCat from './Components/shopByCat'
-import ShopByBrand from './Components/shopByBrand'
 import AddItem from './Components/addItem'
 import Home from './Components/home'
 import ShowItem from './Components/showItems'
@@ -32,42 +30,16 @@ class App extends Component {
         
         <Route path="/" component={Home} exact/>
         <Route path="/addItem" component={AddItem}/>
-        <Route path="/showItem/:typeId" component={ShowItem}/>
+        <Route path="/showItem/:typeId/:pageFrom" component={ShowItem}/>
         
       </main>
       </Router>
     )
-    // return (
-    //   <main>
-    //     <div>
-    //       <AddItem/>
-    //     </div>
-    //   </main>
-    // )
   }
 
   topNav()
   {
     return <TopMenuBar/>
-  }
-  
-
-  componentDidMount() {
-    const targetUrl = 'http://localhost:8080/getItemsByType/1'
-    fetch(targetUrl, {
-      method: 'GET',
-      headers: { 'Content-Type': 'application/json' ,'Access-Control-Allow-Origin': '*'}
-    })
-      .then((res) => res.json())
-      .then((Response) => {
-        console.log(Response)
-        this.setState({
-          data: Response
-        });
-      },
-      (error) => {
-        alert("error")
-      })
   }
 }
 

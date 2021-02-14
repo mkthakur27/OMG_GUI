@@ -48,13 +48,18 @@ class ShopByBrand extends Component {
       )
   }
   getColumn(data) {
+    const pageName = 'shopByBrand'
     return data.map((elm, index) => {
       return (
         <Col key={index}>
-          <Link to="/showItem">
-            <img className="imageFile" src={elm.imgPath}></img>
+          <Link
+            to={{
+              pathname: `showItem/${elm.id}/${pageName}`,
+            }}
+          >
+            <img className="imageFile" src={elm.imgPath} alt={elm.name}></img>
           </Link>
-          <img src={elm.logoImgPath} className="brandLogo"></img>
+          <img src={elm.logoImgPath} className="brandLogo" alt={elm.name}></img>
         </Col>
       )
     })

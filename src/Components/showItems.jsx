@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Row, Col, CheckBox, Container } from 'react-bootstrap'
+import { Row, Col, Container } from 'react-bootstrap'
 import '../css/showItems.css'
 import Item from './item'
 
@@ -71,7 +71,13 @@ class ShowItems extends Component {
   }
 
   componentDidMount() {
-    const targetUrl = `http://localhost:8080/getItemsByType/${this.props.match.params.typeId}`
+    const pageName = this.props.match.params.pageFrom
+    let targetUrl = ''
+    if (pageName === 'shopByCat') {
+      targetUrl = `http://localhost:8080/getItemsByType/${this.props.match.params.typeId}`
+    } else if (pageName === 'shopByBrand') {
+      targetUrl = `http://localhost:8080/getItemsByBrand/${this.props.match.params.typeId}`
+    }
     fetch(targetUrl, {
       method: 'GET',
       headers: {
